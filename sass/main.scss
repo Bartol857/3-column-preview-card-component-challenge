@@ -1,0 +1,93 @@
+@use './colors' as *;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: $verylightgray;
+	font-family: 'Lexend Deca', sans-serif;
+	font-size: 15px;
+	line-height: 1.375rem;
+	color: $transparentwhite;
+}
+
+h1 {
+	font-family: 'Big Shoulders Display', cursive;
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	color: $verylightgray;
+}
+
+.cards {
+	margin: 4rem 1.75rem;
+	border-radius: 15px;
+	overflow: hidden;
+
+	&__box {
+		padding: 3rem;
+	}
+
+	&__title {
+		padding: 2rem 0;
+	}
+	&__text {
+		height: 30%;
+	}
+
+	button {
+		margin: 2.5rem 0;
+		padding: 1rem 2.375rem;
+		font-family: 'Lexend Deca', sans-serif;
+		font-size: 15px;
+		background-color: $verylightgray;
+		border: 2px solid transparent;
+		border-radius: 25px;
+        transition: .3s;
+		cursor: pointer;
+	}
+    
+	button:hover {
+		background-color: transparent;
+		color: $verylightgray;
+		border: 2px solid $verylightgray;
+	}
+
+    &__btn--first{
+        color: $brightorange;
+    }
+    &__btn--second{
+        color: $darkcyan;
+    }
+    &__btn--third{
+        color: $verydarkcyan;
+    }
+}
+
+.first {
+	background-color: $brightorange;
+}
+.second {
+	background-color: $darkcyan;
+}
+.third {
+	background-color: $verydarkcyan;
+}
+
+footer {
+	.attribution {
+		font-size: 11px;
+		text-align: center;
+        color: $brightorange;
+	}
+	.attribution a {
+		color: $darkcyan;
+	}
+}
+
+@import './tablet';
+@import './desktop';
